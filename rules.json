@@ -252,9 +252,6 @@
       "owasp": "A01:2021",
       "mitre": "T1068"
     },
-
-    // ------ NEW RULES BEGIN HERE ------
-
     {
       "name": "Unrestricted File Upload",
       "extension": "*",
@@ -686,6 +683,30 @@
       "category": "Information Disclosure",
       "owasp": "A01:2021",
       "mitre": "T1552"
+    },
+    {
+      "name": "Vulnerable Flask Version",
+      "extension": "requirements.txt",
+      "regex": "flask==1\\.1\\.2",
+      "severity": "High",
+      "confidence": "likely",
+      "cve": "CVE-2019-1010083",
+      "recommendation": "Используйте Flask >=1.1.4",
+      "category": "Dependency",
+      "owasp": "A06:2021",
+      "mitre": "T1190"
+    },
+    {
+      "name": "Vulnerable Lodash Version",
+      "extension": "package.json",
+      "regex": "\"lodash\":\\s*\"[\\^~]?4\\.17\\.(0|1|2|3|4|5|6|7|8|9|10|11)\"",
+      "severity": "Critical",
+      "confidence": "likely",
+      "cve": "CVE-2021-23337",
+      "recommendation": "Используйте lodash >=4.17.21",
+      "category": "Dependency",
+      "owasp": "A06:2021",
+      "mitre": "T1190"
     }
   ]
 }
