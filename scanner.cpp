@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <fstream>
 #include <filesystem>
@@ -23,7 +22,14 @@ void scan(const Rule& rule) {
     std::regex re(rule.pattern, std::regex::icase);
     for (const auto& file : fs::recursive_directory_iterator(".")) {
         if (!file.is_regular_file()) continue;
-        if (file.path().extension() != rule.extension) continue;
+
+        // Поддержка "*" -- применяем для любых расширений/файлов
+        bool check = false;
+        if (rule.extension == "*") check = true;
+        else if (file.path().filename() == rule.extension) check = true;
+        else if (file.path().extension() == rule.extension) check = true;
+
+        if (!check) continue;
 
         std::ifstream f(file.path());
         if (!f) continue;
