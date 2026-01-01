@@ -207,7 +207,7 @@
     {
       "name": "Dockerfile Running as Root",
       "extension": "Dockerfile",
-      "regex": "^\\s*USER\\s+root\\b",
+      "regex": "^\\s*USER\\s+(root|0)(:|\\s|$)",
       "severity": "High",
       "confidence": "Sure",
       "cve": "N/A",
