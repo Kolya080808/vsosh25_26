@@ -203,6 +203,18 @@
       "category": "Dependency",
       "owasp": "A06:2021",
       "mitre": "T1190"
+    },
+    {
+      "name": "Dockerfile Running as Root",
+      "extension": "Dockerfile",
+      "regex": "^\\s*USER\\s+root\\s*$",
+      "severity": "High",
+      "confidence": "Sure",
+      "cve": "N/A",
+      "recommendation": "Run container as non-root user by adding USER directive with non-root user",
+      "category": "Container Security",
+      "owasp": "A05:2021",
+      "mitre": "T1068"
     }
   ]
 }

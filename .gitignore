@@ -1,0 +1,17 @@
+# Compiled binaries
+scanner
+
+# Temporary files
+*.tmp
+vuln_*.tmp
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
