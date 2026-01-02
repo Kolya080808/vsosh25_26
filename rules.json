@@ -159,7 +159,7 @@
     {
       "name": "Vulnerable Django Version",
       "extension": "requirements.txt",
-      "regex": "django[=<>!~ ]*(1\\.11\\.[0-9]|2\\.0\\.[0-8]|2\\.1\\.[0-4]|2\\.2\\.[0-8])\\b",
+      "regex": "django[=<>!~ ]*(1\\.11\\.[0-9]+|2\\.0\\.[0-8]|2\\.1\\.[0-4]|2\\.2\\.[0-8])\\b",
       "severity": "Critical",
       "confidence": "Sure",
       "cve": "CVE-2020-7471",
